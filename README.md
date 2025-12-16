@@ -4,7 +4,7 @@
 
 - Sunil Budhathoki – Backend Developer (MERN)
 - Rupesh – Frontend Developer (React)
-- Samish – Project Supervisor / Instructor
+- Samrajya sir – Project Supervisor / Instructor
 
 ## Internship Project
 
