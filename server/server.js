@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config";
 import { connectDb } from "./config/db.js";
+import webhookRouter from "./routes/webhookRoutes.js";
 
 // initialize expree
 const app = express();
@@ -14,9 +15,7 @@ app.use(express.json());
 await connectDb();
 
 // routes
-app.get("/", (req, res) => {
-  res.send("API is working");
-});
+app.use("/webhooks", webhookRouter);
 
 // PORT
 const PORT = process.env.PORT || 5000;
