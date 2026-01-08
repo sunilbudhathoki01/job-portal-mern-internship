@@ -3,6 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import { connectDb } from "./config/db.js";
 import webhookRouter from "./routes/webhookRoutes.js";
+import companyRouter from "./routes/companyRoutes.js";
 
 // initialize expree
 const app = express();
@@ -16,6 +17,7 @@ await connectDb();
 
 // routes
 app.use("/webhooks", webhookRouter);
+app.use("/api/company", companyRouter);
 
 // PORT
 const PORT = process.env.PORT || 5000;
