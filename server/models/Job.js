@@ -16,7 +16,7 @@ const jobSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  label: {
+  level: {
     type: String,
     required: true,
   },
@@ -30,7 +30,7 @@ const jobSchema = new mongoose.Schema({
   },
   visible: {
     type: Boolean,
-    required: true,
+    default: true,
   },
   companyId: {
     type: mongoose.Schema.Types.ObjectId,

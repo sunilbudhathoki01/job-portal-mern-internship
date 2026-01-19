@@ -5,6 +5,7 @@ import { connectDb } from "./config/db.js";
 import webhookRouter from "./routes/webhookRoutes.js";
 import companyRouter from "./routes/companyRoutes.js";
 import { connectCloudinary } from "./config/cloudinary.js";
+import jobRoutes from "./routes/jobRoutes.js"
 
 // initialize expree
 const app = express();
@@ -20,6 +21,7 @@ await connectCloudinary();
 // routes
 app.use("/webhooks", webhookRouter);
 app.use("/api/company", companyRouter);
+app.use("/api/jobs",jobRoutes)
 
 // PORT
 const PORT = process.env.PORT || 5000;
